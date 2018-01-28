@@ -18,6 +18,8 @@ defmodule Platform.Application do
       supervisor(PlatformWeb.Endpoint, []),
       # Start your own worker by calling: Platform.Worker.start_link(arg1, arg2, arg3)
       # worker(Platform.Worker, [arg1, arg2, arg3]),
+      # Start Phoenix Presence
+      supervisor(Platform.GamePresence, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
